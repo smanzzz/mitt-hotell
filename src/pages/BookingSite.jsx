@@ -61,6 +61,7 @@ export function BookingSite({ onBookingComplete }) {
                             min={today}
                             value={checkIn}
                             onChange={(e) => setCheckIn(e.target.value)}
+                            onClick={(e) => e.target.showPicker()}
                             required
                         />
                     </div>
@@ -71,6 +72,7 @@ export function BookingSite({ onBookingComplete }) {
                             min={checkIn}
                             value={checkOut}
                             onChange={(e) => setCheckOut(e.target.value)}
+                            onClick={(e) => e.target.showPicker()}
                             required
                         />
                     </div>
