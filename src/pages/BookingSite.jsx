@@ -7,7 +7,7 @@ export function BookingSite({ onBookingComplete }) {
     const [checkIn, setCheckIn] = useState("");
     const [checkOut, setCheckOut] = useState("");
     const [guestName, setGuestName] = useState("");
-    const [roomType, setRoomType] = useState("");
+    const [roomType, setRoomType] = useState("Standard");
     const [guests, setGuests] = useState(1);
 
 
@@ -47,7 +47,7 @@ export function BookingSite({ onBookingComplete }) {
 
 
     }
-    const isFormValid = guestName.length > 2 && checkIn !== "" && checkOut !== "" && guests >= 1 && guests <= 10;
+    const isFormValid = guestName.length > 2 && checkIn !== "" && checkOut !== "" && guests >= 1 && guests <= 10 && roomType !== "";
     return (
         <>
             <div className="body">
